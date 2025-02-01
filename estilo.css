@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Elimina márgenes */
+    background-image: url(wallpappers/back1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Hace que la imagen se ajuste a toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Asegura que cubra toda la altura de la pantalla */
+    width: 100%; /* Asegura que cubra todo el ancho */
+}
+
+section { margin-bottom: 20px; }
+label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px; }
+input, select, button { padding: 8px 12px; margin-bottom: 10px; font-size: 14px; }
+button { background-color: #007bff; color: white; border: none; cursor: pointer; }
+button:hover { background-color: #0056b3; }
+
+
+
+/* Contenedor principal */
+.container {
+    display: flex; /* Flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 90vh; /* Altura total de la pantalla */
+}
+
+/* Caja de estilo inspirado en macOS */
+.loginbox {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
+    backdrop-filter: blur(30px); /* Desenfoque del fondo */
+    border-radius: 12px; /* Bordes redondeados */
+    padding: 40px 50px; /* Espaciado interno */
+    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);  Sombra para dar profundidad */
+    color: white; /* Texto en blanco */
+    text-align: center; /* Centrar contenido */
+    max-width: 400px; /* Ancho máximo para mantener proporción */
+    width: 90%; /* Ancho adaptable a dispositivos más pequeños */
+}
+
+/* Botón estilizado */
+.button2 {
+    display: inline-block; /* Cambiado a bloque para ocupar una línea completa */
+    margin: 8px 3px; /* Espaciado */
+    padding: 10px; /* Tamaño triplicado */
+    background-color: #bcebbe; /* Color de fondo */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+    font-size: 14px; /* Tamaño del texto */
+    text-align: center; /* Centra el texto */
+}
+
+.button2:hover {
+    background-color: #345936; /* Fondo más oscuro al pasar el cursor */
+    color: white;
+}
+
+
+
+
+table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
+th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+th { background-color: #f2f2f2; }
+.btn-container { display: flex; gap: 5px; }
+.action-btn { padding: 5px 10px; font-size: 12px; border: none; cursor: pointer; }
+.btn-edit { background-color: #28a745; color: white; }
+.btn-delete { background-color: #dc3545; color: white; }
+.modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 100%; max-width: 600px; }
+.modal-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #f2f2f2;
+color: black;
+padding: 10px;
+marign-top:10px;
+border-radius: 5px 5px 0 0;
+}
+
+ /* Barra estilo macOS en modo oscuro */
+ .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
+    backdrop-filter: blur(30px); /* Desenfoque del fondo */
+    color: #f5f5f7; /* Texto claro */
+    padding: 5px 15px;
+    height: 30px; /* Altura similar a macOS */
+    font-size: 14px;
+    border: none; /* Sin bordes */
+    width: 100vw; /* Ocupa todo el ancho de la ventana */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+/* Logo y texto "Acerca de" */
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-bar-left img {
+    height: 20px; /* Altura ajustada a la barra */
+    width: auto;
+}
+
+.top-bar-left span {
+    cursor: pointer;
+}
+
+/* Botón de "Cerrar sesión" */
+.top-bar-right {
+    cursor: pointer;
+}
+
+.top-bar-right:hover {
+    text-decoration: underline;
+}
+
+.modal-close {
+background-color: transparent;
+color: white;
+font-size: 12px;
+font-weight: bold;
+border: none;
+cursor: pointer;
+align-self: flex-start;
+}
+
+.modal-close:hover {
+color: #ffdddd;
+}
+
+.overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); }
+.category-list { list-style: none; padding: 0; margin: 0; }
+.category-list li { padding: 8px; border-bottom: 1px solid #ddd; font-size: 14px; }
+.category-list button { padding: 4px 8px; font-size: 12px; }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Inventario con Categorías</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- Barra estilo macOS -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <img src="https://i0.wp.com/coffeewaffles.cl/wp-content/uploads/2020/08/cropped-logowaffler-8.png?fit=250%2C251&ssl=1" alt="Logo">
+            <span>Gestión de Inventario Bienvenido:</span>
+        </div>
+        <div class="top-bar-right" onclick="logout()">
+            Cerrar sesión
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="loginbox">
+        <button id="showAgregar" class="button2">Agregar Producto</button>
+        <button id="showInventory" class="button2">Ver Inventario</button>
+        <button id="showCategories" class="button2">Ver Categorías</button>
+    </div>
+</div>
+    </section>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Modal: Agregar Producto -->
+    <div class="modal" id="agregarModal">
+        <div class="modal-header">
+            <h2>Agregar Producto</h2>
+            <button id="closeAgregarModal">&times;</button>
+        </div>
+        <form id="productForm">
+            <label for="nombre">Nombre del Producto:</label>
+            <input type="text" id="nombre" required>
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" required>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" required>
+            <label for="unidad">Unidad:</label>
+            <select id="unidad" required>
+                <option value="Kg">Kg</option>
+                <option value="Unidad">Unidad</option>
+                <option value="Litros">Litros</option>
+                <option value="Pack">Pack</option>
+            </select>
+
+
+<label for="categoria">Categoría:</label>
+<input type="text" id="categoria" list="categoryOptions" placeholder="Elige o escribe categoría" required>
+            <datalist id="categoryOptions"></datalist>
+<button type="submit">Agregar Producto</button>
+        </form>
+    </div>
+
+    <!-- Modal: Ver Inventario -->
+    <div class="modal" id="inventoryModal">
+        <div class="modal-header">
+            <h2>Inventario</h2>
+            <button id="closeInventoryModal">&times;</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Unidad</th>
+                    <th>Total</th>
+<th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="productList"></tbody>
+        </table>
+    </div>
+
+    <div class="modal" id="categoriesModal">
+        <div class="modal-header">
+            <h2>Categorías</h2>
+            <button id="closeCategoriesModal">&times;</button>
+        </div>
+        <ul class="category-list" id="categoryList"></ul>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
